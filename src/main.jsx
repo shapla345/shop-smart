@@ -7,10 +7,29 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { router } from './Routes/Routes';
+import AuthProvider from './providers/AuthProvider';
+//import {AuthProvider} from './providers/AuthProvider';
+
+// export default function Main({children}: {children: React.ReactNode}){
+// return <>{children}</>;
+// }
+// '
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-        <RouterProvider router={router} />
+     {/* <div className='max-w-screen-xl mx-auto'>
+      <AuthProvider>
+      <RouterProvider router={router} />
+     </AuthProvider>
+     </div> */}
+
+     
+      <AuthProvider className='max-w-screen-xl mx-auto '>
+      <RouterProvider router={router} />
+     </AuthProvider>
+     
+     
+       
 
   </StrictMode>,
 )
